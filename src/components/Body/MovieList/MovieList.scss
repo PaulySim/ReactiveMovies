@@ -1,0 +1,76 @@
+$movieImgW: 180px;
+$movieImgH: 270px;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 90%;
+  padding-top: 25%;
+}
+
+.movie {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 20%;
+  margin: 1rem auto;
+  position: relative;
+  &:hover {
+    .movieImg {
+      filter: blur(5px);
+    }
+    .movieTitle {
+      opacity: 1;
+    }
+  }
+}
+
+.movieImg {
+  margin: 1rem auto;
+  position: relative;
+  height: $movieImgH;
+  width: $movieImgW;
+  text-align: center;
+  box-shadow: 10px 50px 100px #000;
+  transition: filter 0.2s;
+}
+
+.movieTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: $movieImgW;
+  height: $movieImgH;
+  position: absolute;
+  top: 0;
+  margin: 1rem auto;
+  padding: 0;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-shadow: 1px 1px 10px black;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.movieGenres {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: $movieImgW;
+  z-index: 1;
+  font-size: 2em;
+}
+
+.headsUp {
+  font-weight: 300;
+  font-size: 3em;
+  a {
+    font-weight: 400;
+    color: #ddd;
+  }
+}

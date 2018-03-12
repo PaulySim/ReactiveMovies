@@ -1,0 +1,30 @@
+.header {
+  height: 100vh;
+  min-width: 250px;
+  background: rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hello {
+  font-size: 1.5em;
+  position: relative;
+  top: 20px;
+}
+
+.made {
+  font-size: 1.1em;
+  text-align: left;
+  font-weight: 300;
+  position: relative;
+  bottom: 20px;
+}

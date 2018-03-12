@@ -1,0 +1,27 @@
+.container {
+	width: 85%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 200px;
+	flex: 0 0 20%;
+	transition: background-color 0.2s;
+	span {
+		font-size: 2em;
+		display: block;
+	}
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+}
+.icon {
+	margin: 1rem 0;
+}

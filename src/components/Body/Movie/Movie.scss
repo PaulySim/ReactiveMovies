@@ -1,0 +1,287 @@
+$movieImgH: 645px;
+$movieImgW: 430px;
+$movieRImgH: 225px;
+$movieRImgW: 150px;
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.movieInfo,
+.movieImg {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.movieImg {
+  position: relative;
+  img {
+    height: $movieImgH;
+    width: $movieImgW;
+    box-shadow: 10px 50px 200px #000;
+    transition: filter 0.2s;
+  }
+  &:hover {
+    img {
+      filter: blur(5px);
+    }
+    .movieOverview {
+      opacity: 1;
+    }
+  }
+}
+
+.movieOverview {
+  width: calc(#{$movieImgW} - 2rem);
+  margin: 0;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  text-align: justify;
+  opacity: 0;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 5px black;
+  transition: opacity 0.2s;
+}
+
+.movieInfo {
+  max-width: 665px;
+  height: $movieImgH;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.movieTitle {
+  margin: 0;
+  padding: 0;
+}
+
+.movieYear {
+  font-weight: 300;
+  margin-left: 1rem;
+  font-style: italic;
+}
+
+.movieReleased,
+.movieNotReleased {
+  margin-left: 1rem;
+}
+
+.movieReleased {
+  color: #2e7d32;
+}
+
+.movieNotReleased {
+  color: #c62828;
+}
+
+.movieGenre {
+  margin: 0 1rem;
+  &:first-of-type {
+    margin: 0 1rem 0 0;
+  }
+}
+
+.movieTagline {
+  margin: 1rem 0;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.movieOverview {
+  margin: 2rem 0;
+  margin-top: auto;
+  text-align: justify;
+}
+
+.videoButton {
+  font-size: 2em;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  margin: 1rem 0;
+  max-width: 250px;
+  .videoPlay {
+    position: relative;
+    left: 20px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 6px 0 0 5px;
+    clip-path: polygon(100% 50%, 0 100%, 0 0);
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s, left 0.5s;
+  }
+  &:hover {
+    .videoPlay {
+      opacity: 1;
+      left: 0;
+    }
+  }
+}
+
+.movieRecommHeader {
+  margin-top: auto;
+}
+.movieRecomm {
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    height: 225px;
+    width: 150px;
+    margin: 0 1rem;
+    box-shadow: 10px 50px 100px #000;
+
+    &:first-of-type {
+      margin: 0 1rem 0 0;
+    }
+  }
+}
+.localButton {
+  display: flex;
+  max-width: 200px;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  font-size: 1.1em;
+  color: #fff;
+  align-items: center;
+  &:hover {
+    .notWatched {
+      &:after {
+        opacity: 1;
+        left: 0;
+      }
+    }
+  }
+
+  .watched,
+  .notWatched {
+    &:after {
+      position: relative;
+      margin-left: 0.5rem;
+      font-size: 1.5em;
+      transition: opacity 0.5s, left 0.5s;
+    }
+  }
+  &:nth-of-type(1) {
+    .watched,
+    .notWatched {
+      &:after {
+        content: "🎥";
+      }
+    }
+  }
+
+  &:nth-of-type(2) {
+    .watched {
+      &:after {
+        content: "👍";
+      }
+    }
+    .notWatched {
+      &:after {
+        content: "👎";
+      }
+    }
+  }
+  .watched {
+    &:after {
+      color: #2e7d32;
+      left: 0;
+      opacity: 1;
+    }
+  }
+  .notWatched {
+    &:after {
+      color: #c62828;
+      left: 20px;
+      opacity: 0;
+    }
+  }
+}
+
+.movieRecommImg {
+  position: relative;
+  img {
+    transition: filter 0.2s;
+  }
+  .movieRecommTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: $movieRImgW;
+    height: $movieRImgH;
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-shadow: 1px 1px 10px black;
+    transition: opacity 0.2s;
+    opacity: 0;
+  }
+  &:hover {
+    img {
+      filter: blur(5px);
+    }
+    .movieRecommTitle {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  $movieImgH: 540px;
+  $movieImgW: 360px;
+  .movieImg {
+    img {
+      height: $movieImgH;
+      width: $movieImgW;
+    }
+  }
+  .movieInfo {
+    height: auto;
+  }
+
+  .movieOverview {
+    width: calc(#{$movieImgW} - 2rem);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .movie {
+    flex-wrap: wrap;
+  }
+  $movieImgH: 540px;
+  $movieImgW: 360px;
+  .movieImg {
+    margin-top: 2rem;
+    img {
+      height: $movieImgH;
+      width: $movieImgW;
+    }
+  }
+  .movieInfo {
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .movieOverview {
+    width: calc(#{$movieImgW} - 2rem);
+  }
+}

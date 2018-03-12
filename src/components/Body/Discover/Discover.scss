@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.searchBar {
+  position: absolute;
+  margin: 0 auto;
+  outline: 0;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-style: italic;
+  font-size: 2em;
+  padding: 0.5rem;
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.1);
+  top: 50px;
+  &:focus {
+    outline: 0;
+  }
+  &:before {
+    content: "\1F50D";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: red;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.instaButton {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin: 0.5rem;
+  top: 110px;
+}
+
+.instaSearchEnabled {
+  color: green;
+}
+
+.instaSearchDisabled {
+  color: red;
+}

@@ -1,0 +1,76 @@
+:global {
+  @import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+  @import "node_modules/react-modal-video/scss/modal-video.scss";
+
+  body {
+    margin: 0;
+    padding: 0;
+    color: $textColor;
+    background: $radialGradient;
+    font-family: $fontFamily;
+  }
+
+  #gradientBackground {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient(
+      to bottom left,
+      $backColor1 0%,
+      $backColor0 150%
+    );
+    opacity: 0.5;
+  }
+  .detail-page {
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100vh;
+    background-color: #03a9f4;
+    transition: transform 0.5s, opacity 0.5s;
+
+    &.transition-appear {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+
+    &.transition-appear.transition-appear-active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    &.transition-leave {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.transition-leave.transition-leave-active {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  .App {
+    display: flex;
+  }
+  .modal-video {
+    outline: 0 !important;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+    background: none;
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.5s;
+    &:hover,
+    &:focus {
+      color: #fff;
+      outline: 0 !important;
+    }
+  }
+}
