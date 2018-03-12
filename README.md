@@ -11,11 +11,11 @@ Check it out here: [:relaxed: Reactive Movies](http://movies.paulys.co)
 
 ## Setting up Locally
 
-:sweat_drops: Clone:
+Clone:
 
 `git clone https://github.com/PaulySim/ReactiveMovies.git`
 
-:sweat_drops: Upon cloning run:
+Upon cloning run:
 
 `npm install`
 
@@ -31,4 +31,4 @@ or
 
 `yarn start`
 
-Check me out: [:sunglasses:](http://paulys.co)
+[Website :sunglasses:](http://paulys.co)
