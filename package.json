@@ -1,7 +1,7 @@
 {
   "name": "new_react_movies",
   "version": "0.1.0",
-  "homepage": "http://reactivemovies.github.io.git",
+  "homepage": "https://paulysim.github.io/reactivemovies",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
@@ -59,6 +59,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "node scripts/build.js",
     "deploy": "gh-pages -d build"
   },
   "jest": {

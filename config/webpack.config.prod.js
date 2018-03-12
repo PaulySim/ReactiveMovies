@@ -218,13 +218,26 @@ module.exports = {
                 }
               },
               {
-                loader: require.resolve("css-loader")
+                loader: require.resolve("css-loader"),
+                options: {
+                  modules: true,
+                  sourceMap: true,
+                  importLoaders: 2,
+                  localIdentName: "[name]__[local]__[hash:base64:5]"
+                }
               },
               require.resolve("resolve-url-loader"),
               {
                 loader: require.resolve("sass-loader"),
                 options: {
                   sourceMap: shouldUseSourceMap
+                }
+              },
+              {
+                loader: "sass-resources-loader",
+                options: {
+                  // Provide path to the file with resources
+                  resources: "./src/variables.scss"
                 }
               }
             ]
