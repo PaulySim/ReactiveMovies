@@ -1,6 +1,6 @@
 # Reactive Movies :movie_camera: :clapper:
 
-A React Web Application bootstrapped with [`create-react-app`]("https://github.com/facebook/create-react-app").
+A React Web Application bootstrapped with [`create-react-app`](https://github.com/facebook/create-react-app).
 
 * :book: Utilizing [TheMovieDB](https://www.themoviedb.org/) [API](https://developers.themoviedb.org/3/getting-started/introduction) for data.
 * :memo: [Redux](https://github.com/reactjs/redux) for state management.
