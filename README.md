@@ -1,19 +1,21 @@
-# Reactive Movies
+# Reactive Movies :movie_camera: :clapper:
 
 A React Web Application bootstrapped with [`create-react-app`]("https://github.com/facebook/create-react-app").
 
-* Utilizing [TheMovieDB](https://www.themoviedb.org/) [API](https://developers.themoviedb.org/3/getting-started/introduction) for data.
-* [Redux](https://github.com/reactjs/redux) for state management.
-* [React Router](https://github.com/ReactTraining/react-router) for client side navigation.
-* [Wretch](https://github.com/elbywan/wretch) as a substitute for the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+* :book: Utilizing [TheMovieDB](https://www.themoviedb.org/) [API](https://developers.themoviedb.org/3/getting-started/introduction) for data.
+* :memo: [Redux](https://github.com/reactjs/redux) for state management.
+* :snowboarder: [React Router](https://github.com/ReactTraining/react-router) for client side navigation.
+* :wrench: [Wretch](https://github.com/elbywan/wretch) as a substitute for the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+
+Check it out here: [:relaxed: Reactive Movies](http://movies.paulys.co)
 
 ## Setting up Locally
 
-Clone:
+:sweat_drops: Clone:
 
 `git clone https://github.com/PaulySim/ReactiveMovies.git`
 
-Upon cloning run:
+:sweat_drops: Upon cloning run:
 
 `npm install`
 
@@ -21,10 +23,12 @@ or
 
 `yarn`
 
-And enjoy :tada: :tada: with
+:tada: :tada: Enjoy with
 
 `npm start`
 
 or
 
 `yarn start`
+
+Check me out: [:sunglasses:](http://paulys.co)
